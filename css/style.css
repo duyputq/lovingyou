@@ -236,7 +236,7 @@ audio
 
 .first-letter{
   border-radius: 3px;
-  background-image: url(/valentine/img/letter-bg-2.png);
+  background-image: url(../img/letter-bg-2.png);
   height: 600px;
   padding: 30px 100px 60px 100px;
   text-align: justify;
@@ -293,10 +293,6 @@ audio
 }
 .swal2-popup {
   border-radius: 15px !important;
-}
-
-header{
-
 }
 
 .header_gif{
@@ -588,14 +584,6 @@ header h4 {
   font-family: 'Pacifico';
   font-size: 60px;
   
-}
-
-.love-days__clock-box{
-
-}
-
-.love-days__clock{
-
 }
 
 .love-days__date{
