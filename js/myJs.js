@@ -1,6 +1,6 @@
 const textConfig = {
   text1: "Helu em iu!",
-  text2: "Anh có điều này muốn hỏi em nhớ phải trả lời thật lòng nhaaa (bật nhạc ở thanh góc bên trái nhé ^^)",
+  text2: "Em có biết hôm nay là ngày gì không ^^",
   text3: "Em có yêu anh không?...",
   text4: "Nhớ trả lời thật lòng nhé <333",
   text5: "Không đấy :)",
@@ -10,7 +10,7 @@ const textConfig = {
   text9: "Bởi vì em là của anh",
   text10: "Anh biết mà ^^ Hehe",
   text11:
-    "Một ngày Valentine lại đến, chúc em luôn ngập tràn tình yêu nhé",
+    "Mong em luôn giữ tình yêu này trong người nhé",
   text12: "Okii",
 };
 
@@ -31,7 +31,7 @@ $(document).ready(function () {
   $("#yes").html(textConfig.text6);
 
   function firstQuestion() {
-    $(".content").hide();
+    // $(".content").hide();
     Swal.fire({
       title: textConfig.text1,
       text: textConfig.text2,
@@ -41,7 +41,7 @@ $(document).ready(function () {
       background: '#fff url("img/iput-bg.jpg")',
       imageAlt: "Custom image",
     }).then(function () {
-      $(".content").show(200);
+      // $(".content").show(200);
     });
   }
 
