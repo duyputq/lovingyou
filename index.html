@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="./themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./css/snowflake.css">
     <link rel="stylesheet" href="./css/animation.css">
+    <link rel="stylesheet" href="./css/game.css">
   </head>
   <body>
       <!-- Preloader -->
@@ -302,7 +303,45 @@
   </div>
 
   <div id="blank-slide">
+    <div class="wrapper">
+      <button type="button" class="settings js-settings" aria-haspopup="true" aria-expanded="false" aria-label="Settings"></button>
+      <div class="js-settings-popup settings-popup">
+        <div class="flex">
+          <label class="btn flex-cell" aria-label="Use Twitter Emoji"><input type="radio" name="emoji" id="twemoji" checked> Twemoji</label>
+          <label class="btn flex-cell" aria-label="Use Native Emoji"><input type="radio" name="emoji" id="emoji"> Native emoji</label>
+        </div>
+        <div class="flex">
+          <input id="cols" class="input flex-cell" type="number" value="15" min="1" max="500" aria-label="Columns">
+          <div class="flex-cell divider">&times;</div>
+          <input id="rows" class="input flex-cell" type="number" value="15" min="1" max="500" aria-label="Rows"><br>
+        </div>
+        <div class="prepend-input">💣</div>
+        <input id="bombs" class="input" type="number" value="30" min="1" max="2500" aria-label="Number of bombs">
+        <select id="emojiset" class="input input-select" aria-label="Change emoji set">
+          <option value="🐣 💣 🚧 ◻️">🐣 💣 🚧</option>
+          <option value="🍰 👾 📌 ◻️">🍰 👾 📌</option>
+          <option value="🌷 ⚡️ 🐞 ◻️">🌷 ⚡️ 🐞</option>
+          <option value="⭕️ ❌ ❗️ ✖️️">⭕️ ❌ ❗️ ✖️</option>
+          <option value="☀ ⚡ ☔ ☁️">☀ ⚡ ☔ ☁️</option>
+        </select>
+        <button class="js-popup-new-game btn" type="button">Save and restart game</button>
+      </div>
+      <button type="button" class="action-btn js-new-game" aria-label="New game">
+        <span class="default-emoji"></span>
+        <span id="result" class="result-emoji"></span>
+      </button>
+      <div id="map" role="grid" aria-label="Mine field">
+      </div>
+      <div class="bar flex">
+        <div class="stat flex-cell"><div id="bombs-left">0</div><span class="small-text">BOMBS</span></div>
+        <div class="stat flex-cell"><div id="moves"></div><span class="small-text">MOVES</span></div>
+        <div class="stat flex-cell"><div id="timer"></div><span class="small-text">TIME</span></div>
+      </div>
+    </div>
+    <div aria-live="assertive" class="feedback"></div>
   </div>
+
+
 
   <!-- Footer -->
   <footer id="footer">
@@ -338,9 +377,42 @@
   <script src="./js/snowflake.js"></script>
   <script src="./js/menu-model.js"></script>
   <script src="./js/slideshow.js"></script>
-  <script src='./js/tetris.js'></script>
-  <script src='./js/controller.js'></script>
-  <script src='./js/render.js'></script>
+  <script src="./js/game.js"></script>
+  <script src="./js/twemoji.js"></script>
+  <script>
+    var emojiset = document.getElementById('emojiset').value.split(' ')
+    var cols = document.getElementById('cols')
+    var rows = document.getElementById('rows')
+    var bombs = document.getElementById('bombs')
+
+    game = new Game(cols.value, rows.value, bombs.value, emojiset, document.getElementById('twemoji').checked)
+
+    document.querySelector('.js-new-game').addEventListener('click', restart)
+    document.querySelector('.js-popup-new-game').addEventListener('click', restart)
+
+    document.querySelector('.js-settings').addEventListener('click', function() {
+      var list = document.querySelector('.js-settings-popup').classList
+      list.contains('show') ? list.remove('show') : list.add('show')
+      this.setAttribute('aria-expanded', list.contains('show'))
+    })
+
+    function restart () {
+      clearInterval(game.timer)
+      emojiset = document.getElementById('emojiset').value.split(' ')
+      game = new Game(cols.value, rows.value, bombs.value, emojiset, document.getElementById('twemoji').checked)
+      document.querySelector('.js-settings-popup').classList.remove('show')
+      return false
+    }
+  </script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga')
+
+    ga('create', 'UA-21332781-19', 'auto')
+    ga('send', 'pageview')
+  </script>
   </body>
 </html>
 

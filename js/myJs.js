@@ -1,9 +1,9 @@
 const textConfig = {
   text1: "Hellu em iu!",
-  text2: "Anh yêu em rất đậm sâu ",
+  text2: "Chào mừng em quay trở lại.",
   text3: "Em có yêu anh không?...",
   text4: "Nhớ trả lời thật lòng nhé <333",
-  text5: "Buông tay dễ dàng.",
+  text5: "Không đấy :)",
   text6: "Em yêu anh nhắm nhắm ^^ ",
   text7: "Cho anh nghe lý do đi <333 ",
   text8: "Gửi <3",
