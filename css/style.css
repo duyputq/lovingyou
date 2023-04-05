@@ -177,6 +177,14 @@ audio
   text-decoration: none;
 }
 
+.nav__menu-modal-letter{
+  margin-top: 10px;
+}
+
+.nav__menu-modal-letter p{
+  margin-bottom: 0;
+}
+
 /* Slideshow */
 
 #slideshow-container {
@@ -377,7 +385,7 @@ header h4 {
 #pinkboard {
   height: 500px;
   width: 500px;
-  animation: animate 1.3s infinite;
+  animation: animate 0.8s infinite;
 }
   
 #pinkboard:before, #pinkboard:after {
@@ -567,7 +575,6 @@ header h4 {
 }
 
 
-
 #love-days{
   position: relative;
   color: pink;
@@ -593,16 +600,54 @@ header h4 {
 
 .love-days__days{
   font-size: 30px;
-  font-weight: 100;
-  font-family: 'Pacifico';
-  opacity: 0.9;
+  font-weight: 500;
+  /* font-family: 'Pacifico'; */
+
 }
 
 .love-days__time{
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
-  font-family: 'Pacifico';
-  font-size: 30px;
+}
+
+.love-days__block{
+  position: relative;
+  margin: 0 15px;
+  width: 90px;
+  height: 130px;
+  background: rgba(0, 0, 0, 0.3);;
+  border-radius: 3px;
+}
+
+.love-days__block-wrap{
+  position: relative;
+  height: 100px;
+  width: 100%;
+}
+
+.love-days__time-number{
+  font-weight: 500;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 47px;
+}
+
+
+.love-days__unit{
+  font-weight: 500;
+  position: absolute;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  bottom:0;
+  margin: 0;
+  font-size: 20px;
+  border-radius: 3px;
+
 }
 
 .love-days__begin{
@@ -621,7 +666,7 @@ header h4 {
   font-family: 'Pacifico';
   display: flex;
   justify-content: space-between;
-  margin: 45px 485px 65px;
+  margin: 35px 485px 65px;
 }
 
 .love-days__day-begin{
