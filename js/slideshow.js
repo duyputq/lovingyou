@@ -27,11 +27,11 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   timer = setInterval(function() { 
     plusSlides(1);
-  }, 50000);
+  }, 3000);
 }
 
 window.addEventListener('load', function() {
   timer = setInterval(function() {
     plusSlides(1);
-  }, 50000);
+  }, 3000);
 });

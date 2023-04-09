@@ -266,7 +266,7 @@ audio
   padding-top: 50px; 
   color: pink;
   height: 600px;
-  border-bottom: 3px solid #b82d2b;
+  /* border-bottom: 3px solid #b82d2b; */
 }
 
 #no{
@@ -429,7 +429,7 @@ header h4 {
 
 #birthday{
   position: relative;
-  border-bottom: 2px solid #b82d2b;
+  /* border-bottom: 3px solid #b82d2b; */
   opacity: 1;
 } 
 
@@ -518,8 +518,8 @@ header h4 {
 
 #valentine{
   position: relative;
-  border-top: 3px solid #b82d2b ;
-  border-bottom: 3px solid #b82d2b ;
+  /* border-top: 3px solid #b82d2b ; */
+  /* border-bottom: 3px solid #b82d2b ; */
   width: 100%;
   height: 720px;
 }
@@ -532,7 +532,7 @@ header h4 {
 
 .valentine_img{
   margin: 0 15px;
-  width: 60%;
+  width: 893px;
   align-items: center;
 }
 
@@ -700,7 +700,7 @@ header h4 {
   width: 100%;
   height: 700px;
   /* border-bottom: 3px solid #b82d2b ; */
-  border-top: 3px solid #b82d2b ;
+  /* border-top: 3px solid #b82d2b ; */
 }
 
 
