@@ -3,10 +3,25 @@
   box-sizing: border-box; /* ke thua*/  
   padding: 0;
   margin: 0;
-
 }
+
 html{
   scroll-behavior: smooth;
+}
+
+.blackBG{
+  position: fixed;
+  top:0;
+  bottom: 0;
+  right: 0;    
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: none;
+  z-index: 99;
+}
+
+.blackBG.open{
+  display: flex;
 }
 
 audio:hover, audio:focus, audio:active
@@ -186,51 +201,24 @@ audio
 }
 
 /* Slideshow */
-
-#slideshow-container {
+#slide {
   position: relative;
   margin: 0 200px 0;
   width: 1112px;
-  height: 600px;
+  height: 400px;
 }
 
-.mySlides {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 600px;
-  overflow: hidden;
+
+.slide__button-contain{
+  margin: 0 100px 0;
 }
 
-.prev, .next {
-  /* background-color: #ffffff81; */
-  position: absolute;
-  top: 44%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  font-size: 55px;
-  transition: .6s ease;
-  border-radius: 0 3px 3px 0;
-  font-weight: 800;
-}
+.slide__button{
+  padding: 8px 25px 8px;
+  background-color: pink;
+  border-radius: 15px;
+  color: #8F2929;
 
-.prev {
-  left: -59px;
-  border-radius: 3px 0 0 3px;
-}
-
-.next {
-  right: -59px;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-  background-color: rgba(192, 95, 95, 0.5);
-  cursor: pointer;
 }
 
 .letter99{
@@ -242,18 +230,42 @@ audio
   padding-bottom: 10px;
 }
 
-.first-letter{
+
+.slide__letter.slide__active{
+  display: block;
+}
+
+.slide__letter-close{
+  padding:  15px;
+  position: absolute;
+  right: -50px;
+  top: -23px;
+  color: #fff;
+  font-size: 30px;
+}
+
+.slide__letter-close:hover{
+  cursor: pointer;
+}
+
+.slide__letter{
+  position: absolute;
+  display: none; 
   border-radius: 3px;
   background-image: url(../img/letter-bg-2.png);
+  background-size: cover;
+  width: 1112px;
   height: 600px;
   padding: 30px 100px 60px 100px;
+  top: 0;
   text-align: justify;
   color: #8F2929;
   font-family: 'Pacifico';
   font-size: 17.5px;
+  z-index: 100;
 }
 
-.first-letter_count{
+.slide__letter_count{
   opacity: 0.6;
   color: #8F2929;
 }

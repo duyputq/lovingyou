@@ -1,5 +1,6 @@
+/*
 var slideIndex = 1;
-var slides = document.getElementsByClassName("mySlides");
+var slides = document.getElementsByClassName("slide__letter-contain");
 var timer;
 
 showSlides(slideIndex);
@@ -35,3 +36,4 @@ window.addEventListener('load', function() {
     plusSlides(1);
   }, 3000);
 });
+*/
