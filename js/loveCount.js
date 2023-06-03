@@ -1,5 +1,12 @@
 
 const yourDate = new Date("2022-12-19T00:00:00")
+
+let checkDay = Math.floor( Math.floor((new Date() - yourDate) / 1000) / 60 / 60 / 24);
+
+let booleanCheckday = Boolean(checkDay >= 190);
+
+console.log(booleanCheckday);
+
 document.addEventListener('DOMContentLoaded', function(){
       var rootTime_hour = document.getElementById("love-days__time-hour");
       var rootTime_minute = document.getElementById("love-days__time-minute");

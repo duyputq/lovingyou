@@ -221,6 +221,14 @@ audio
 
 }
 
+.slide__button-special{
+  padding: 8px 25px 8px;
+  background-color: pink;
+  border-radius: 15px;
+  color: #8F2929;
+}
+
+
 .letter99{
   font-family: 'Pacifico';
   position: relative;
@@ -235,6 +243,10 @@ audio
   display: block;
 }
 
+.slide__letter-special.slide__active{
+  display: block;
+}
+
 .slide__letter-close{
   padding:  15px;
   position: absolute;
@@ -244,7 +256,20 @@ audio
   font-size: 30px;
 }
 
+.slide__letter-close-special{
+  padding:  15px;
+  position: absolute;
+  right: -50px;
+  top: -23px;
+  color: #fff;
+  font-size: 30px;
+}
+
 .slide__letter-close:hover{
+  cursor: pointer;
+}
+
+.slide__letter-close-special:hover{
   cursor: pointer;
 }
 
@@ -264,6 +289,24 @@ audio
   font-size: 17.5px;
   z-index: 100;
 }
+
+.slide__letter-special{
+  position: absolute;
+  display: none; 
+  border-radius: 3px;
+  background-image: url(../img/letter-bg-2.png);
+  background-size: cover;
+  width: 1112px;
+  height: 600px;
+  padding: 30px 100px 60px 100px;
+  top: 0;
+  text-align: justify;
+  color: #8F2929;
+  font-family: 'Pacifico';
+  font-size: 17.5px;
+  z-index: 100;
+}
+
 
 .slide__letter_count{
   opacity: 0.6;
