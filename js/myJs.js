@@ -1,6 +1,6 @@
 const textConfig = {
-  text1: "Hellu em iu!",
-  text2: "Chào mừng em quay trở lại.",
+  text1: "Anh nhớ em 😢",
+  text2: "Anh nhớ em lắm.",
   text3: "Em có yêu anh không?...",
   text4: "Nhớ trả lời thật lòng nhé <333",
   text5: "Không đấy :)",
@@ -35,7 +35,7 @@ $(document).ready(function () {
     Swal.fire({
       title: textConfig.text1,
       text: textConfig.text2,
-      imageUrl: "img/cuteCat.jpg",
+      imageUrl: "img/hand.jpg",
       imageWidth: 300,
       imageHeight: 300,
       background: '#fff url("img/iput-bg.jpg")',
